@@ -22,7 +22,9 @@ markdown and in a way that is easy to render on a webpage. Remember: format in M
 const anthropic = new Anthropic({
   apiKey: API_KEY,
 });
-
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.post("/api/getrecipe", async (req, res) => {
     const ingredients = req.body.ingredients;
     try {
